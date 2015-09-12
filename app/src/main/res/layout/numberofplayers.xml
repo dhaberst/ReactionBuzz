@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#84d0ff">
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/twoplayers"
+        android:id="@+id/twoplayers"
+        android:layout_above="@+id/threeplayers"
+        android:layout_centerHorizontal="true"
+        android:background="#009eff"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/threeplayers"
+        android:id="@+id/threeplayers"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:background="#009eff"
+        android:layout_marginTop="8sp"
+        android:layout_marginBottom="8sp"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/fourplayers"
+        android:id="@+id/fourplayers"
+        android:layout_below="@+id/threeplayers"
+        android:layout_alignStart="@+id/threeplayers"
+        android:background="#009eff"
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/selectplayers"
+        android:id="@+id/textView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffffff"
+        android:textSize="40sp"
+        android:layout_marginTop="20sp"/>
+</RelativeLayout>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#84d0ff">
+
+    <ImageButton
+        android:layout_width="225sp"
+        android:layout_height="225sp"
+        android:id="@+id/imageButton"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/Circle"
+        android:background="@null"
+        android:scaleType="fitXY" />
+
+    <ImageButton
+        android:layout_width="225sp"
+        android:layout_height="225sp"
+        android:id="@+id/imageButton2"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:src="@drawable/Circle"
+        android:background="@null"
+        android:scaleType="fitXY" />
+</RelativeLayout>

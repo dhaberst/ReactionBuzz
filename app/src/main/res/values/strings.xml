@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Reaction Buzz</string>
+    <string name="action_settings">Settings</string>
+    <string name="Singleplayer">Singleplayer</string>
+    <string name="Multiplayer">Multiplayer</string>
+    <string name="twoplayers">2</string>
+    <string name="threeplayers">3</string>
+    <string name="fourplayers">4</string>
+    <string name="selectplayers">Select Players</string>
+</resources>
