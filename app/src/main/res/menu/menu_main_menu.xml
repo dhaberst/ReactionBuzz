@@ -12,8 +12,15 @@
         android:onClick="reactionstats"
         />
 
-    <item android:id="@+id/buzzercounts"
-        android:title="@string/buzzercounts"
+    <item android:id="@+id/buzzerstats"
+        android:title="@string/buzzerstats"
+        android:onClick="buzzerstats"
         />
+
+    <item android:id="@+id/emailstats"
+        android:title="@string/emailstats"
+        android:onClick="emailstats"
+        />
+
 
 </menu>

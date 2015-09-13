@@ -37,8 +37,18 @@ public class MainMenu extends AppCompatActivity {
         return true;
     }
 
-    public  void reactionstats(MenuItem menu) {
-        Toast.makeText(this,"Reaction Stats",Toast.LENGTH_SHORT).show();
+    public void reactionstats(MenuItem menu) {
+        Toast.makeText(this, "Reaction Stats", Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void buzzerstats(MenuItem menu) {
+        Toast.makeText(this,"Buzzer Stats",Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void emailstats(MenuItem menu) {
+        Toast.makeText(this,"Email Stats",Toast.LENGTH_SHORT).show();
 
     }
 
