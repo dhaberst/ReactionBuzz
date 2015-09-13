@@ -10,5 +10,8 @@
     <string name="reactionstats">Reaction Stats</string>
     <string name="buzzerstats">Buzzer Stats</string>
     <string name="emailstats">Email Stats</string>
+    <string name="title_activity_reaction_game">ReactionGameActivity</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

@@ -20,9 +20,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +45,7 @@ public class MainMenu extends AppCompatActivity {
     }
 
     public void buzzerstats(MenuItem menu) {
-        Toast.makeText(this,"Buzzer Stats",Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Buzzer Stats", Toast.LENGTH_SHORT).show();
 
     }
 
