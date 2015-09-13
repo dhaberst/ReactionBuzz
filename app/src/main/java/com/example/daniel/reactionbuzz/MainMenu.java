@@ -16,20 +16,32 @@
 */
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
 public class MainMenu extends AppCompatActivity {
 
+    Button singleplayerButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
+        singleplayerButton = (Button)findViewById(R.id.singleplayer);
+
+        singleplayerButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, ReactionGameActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
