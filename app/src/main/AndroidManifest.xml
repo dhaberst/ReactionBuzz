@@ -21,10 +21,42 @@
             android:name=".ReactionGameActivity"
             android:label="@string/title_activity_reaction_game"
             android:parentActivityName=".MainMenu"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.daniel.reactionbuzz.MainMenu" />
+        </activity>
+        <activity
+            android:name=".NumberOfPlayers"
+            android:label="@string/title_activity_number_of_players"
+            android:parentActivityName=".MainMenu" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.daniel.reactionbuzz.MainMenu" />
+        </activity>
+        <activity
+            android:name=".TwoPlayerGame"
+            android:label="@string/title_activity_two_player_game"
+            android:parentActivityName=".NumberOfPlayers" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
+        </activity>
+        <activity
+            android:name=".ThreePlayerGame"
+            android:label="@string/title_activity_three_player_game"
+            android:parentActivityName=".NumberOfPlayers" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
+        </activity>
+        <activity
+            android:name=".FourPlayerGame"
+            android:label="@string/title_activity_four_player_game"
+            android:parentActivityName=".NumberOfPlayers" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
         </activity>
     </application>
 

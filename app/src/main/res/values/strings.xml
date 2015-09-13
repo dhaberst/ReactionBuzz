@@ -12,5 +12,9 @@
     <string name="emailstats">Email Stats</string>
     <string name="title_activity_reaction_game">Reaction</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_number_of_players">Players</string>
+    <string name="title_activity_two_player_game">Buzzer</string>
+    <string name="title_activity_three_player_game">Buzzer</string>
+    <string name="title_activity_four_player_game">Buzzer</string>
 
 </resources>
