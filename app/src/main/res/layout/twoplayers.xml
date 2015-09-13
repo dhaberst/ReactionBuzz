@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:src="@drawable/Circle"
+        android:src="@drawable/circle"
         android:background="@null"
         android:scaleType="fitXY" />
 
@@ -22,7 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
-        android:src="@drawable/Circle"
+        android:src="@drawable/circle"
         android:background="@null"
         android:scaleType="fitXY" />
 </RelativeLayout>
