@@ -29,7 +29,8 @@
         <activity
             android:name=".NumberOfPlayers"
             android:label="@string/title_activity_number_of_players"
-            android:parentActivityName=".MainMenu" >
+            android:parentActivityName=".MainMenu"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.daniel.reactionbuzz.MainMenu" />
@@ -37,7 +38,8 @@
         <activity
             android:name=".TwoPlayerGame"
             android:label="@string/title_activity_two_player_game"
-            android:parentActivityName=".NumberOfPlayers" >
+            android:parentActivityName=".NumberOfPlayers"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
@@ -45,7 +47,8 @@
         <activity
             android:name=".ThreePlayerGame"
             android:label="@string/title_activity_three_player_game"
-            android:parentActivityName=".NumberOfPlayers" >
+            android:parentActivityName=".NumberOfPlayers"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
@@ -53,7 +56,8 @@
         <activity
             android:name=".FourPlayerGame"
             android:label="@string/title_activity_four_player_game"
-            android:parentActivityName=".NumberOfPlayers" >
+            android:parentActivityName=".NumberOfPlayers"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.daniel.reactionbuzz.NumberOfPlayers" />
