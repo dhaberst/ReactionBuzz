@@ -1,17 +1,47 @@
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class TwoPlayerGame extends AppCompatActivity {
+
+    Button oneplayerbutton;
+    Button twoplayerbutton;
+    public ButtonPress pressed = new ButtonPress();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.twoplayers);
+
+        oneplayerbutton = (Button)findViewById(R.id.oneplayerbutton);
+        twoplayerbutton = (Button)findViewById(R.id.twoplayerbutton);
+
+        // Player one's button
+        oneplayerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressed.onPress(oneplayerbutton);
+                startActivity(new Intent(TwoPlayerGame.this, PlayOnePop.class));
+                pressed.onReset(oneplayerbutton);
+            }
+        });
+
+        // Player two's button
+        twoplayerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressed.onPress(twoplayerbutton);
+                startActivity(new Intent(TwoPlayerGame.this,PlayTwoPop.class));
+                pressed.onReset(twoplayerbutton);
+            }
+        });
     }
 
     @Override
@@ -23,11 +53,6 @@ public class TwoPlayerGame extends AppCompatActivity {
 
     public void buzzerstats(MenuItem menu) {
         Toast.makeText(this, "Buzzer Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void emailstats(MenuItem menu) {
-        Toast.makeText(this, "Email Stats", Toast.LENGTH_SHORT).show();
 
     }
 

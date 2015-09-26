@@ -17,10 +17,4 @@
         android:onClick="buzzerstats"
         />
 
-    <item android:id="@+id/emailstats"
-        android:title="@string/emailstats"
-        android:onClick="emailstats"
-        />
-
-
 </menu>

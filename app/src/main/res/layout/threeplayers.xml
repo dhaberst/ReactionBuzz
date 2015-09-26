@@ -3,39 +3,39 @@
     android:layout_width="match_parent" android:layout_height="match_parent"
     android:background="#84d0ff">
 
-    <ImageButton
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:id="@+id/imageButton3"
-        android:src="@drawable/circle"
-        android:scaleType="fitXY"
-        android:background="@null"
+    <Button
+        android:layout_width="193dp"
+        android:layout_height="193dp"
+        android:id="@+id/oneplayerbutton"
+        android:background="@drawable/buttontransition"
+        android:text="@string/playeronebuzz"
+        android:textSize="70sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"/>
+
+    <Button
+        android:layout_width="193dp"
+        android:layout_height="193dp"
+        android:id="@+id/twoplayerbutton"
+        android:background="@drawable/buttontransition"
+        android:textSize="70sp"
+        android:text="@string/playertwobuzz"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"/>
+
+    <Button
+        android:layout_width="193dp"
+        android:layout_height="193dp"
+        android:id="@+id/threeplayerbutton"
+        android:background="@drawable/buttontransition"
+        android:textSize="70sp"
+        android:text="@string/playerthreebuzz"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true"
         android:layout_marginBottom="10dp"
-        android:layout_marginLeft="7dp"/>
-
-    <ImageButton
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:id="@+id/imageButton4"
-        android:layout_marginLeft="7dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/circle"
-        android:scaleType="fitXY"
-        android:background="@null"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
-    <ImageButton
-        android:layout_width="200sp"
-        android:layout_height="200sp"
-        android:id="@+id/imageButton5"
-        android:layout_marginRight="5dp"
-        android:src="@drawable/circle"
-        android:background="@null"
-        android:scaleType="fitXY"
-        android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_marginLeft="10dp"/>
 
 </RelativeLayout>

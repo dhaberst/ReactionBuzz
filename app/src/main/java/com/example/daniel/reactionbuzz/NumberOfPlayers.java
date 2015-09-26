@@ -61,11 +61,6 @@ public class NumberOfPlayers extends AppCompatActivity {
 
     }
 
-    public void emailstats(MenuItem menu) {
-        Toast.makeText(this, "Email Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will

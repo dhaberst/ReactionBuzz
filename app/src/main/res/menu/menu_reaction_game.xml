@@ -10,8 +10,4 @@
         android:onClick="reactionstats"
         />
 
-    <item android:id="@+id/emailstats"
-        android:title="@string/emailstats"
-        android:onClick="emailstats"
-        />
 </menu>

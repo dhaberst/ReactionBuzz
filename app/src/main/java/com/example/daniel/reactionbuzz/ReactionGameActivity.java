@@ -7,16 +7,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
-import com.example.daniel.reactionbuzz.reactionTime;
+
+import java.util.Timer;
+import java.util.TimerTask;
 
 public class ReactionGameActivity extends AppCompatActivity {
 
     Button reactionbutton;
-
-    public reactionTime reactiontime = new reactionTime();
+    public ButtonPress reactiontime = new ButtonPress();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        final  Timer timer = new Timer();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactiongame);
 
@@ -24,8 +26,20 @@ public class ReactionGameActivity extends AppCompatActivity {
         reactionbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // waiting 10 ms
+                try {
+                    Thread.sleep(10);
+                } catch (InterruptedException ex) {
+                    Thread.currentThread().interrupt();
+                }
                 reactiontime.onPress(reactionbutton);
+                timer.schedule(new TimerTask() {
+                    @Override
+                    public void run() {
+                        // Code
+                    }
+                }, 2000);
+
             }
         });
     }
@@ -39,11 +53,6 @@ public class ReactionGameActivity extends AppCompatActivity {
 
     public void reactionstats(MenuItem menu) {
         Toast.makeText(this, "Reaction Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void emailstats(MenuItem menu) {
-        Toast.makeText(this,"Email Stats",Toast.LENGTH_SHORT).show();
 
     }
 

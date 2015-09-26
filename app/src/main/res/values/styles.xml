@@ -6,7 +6,10 @@
         <item name="colorPrimary">#009eff</item>
         <item name="android:textColorPrimary">#ffffff</item>
         <!-- <item name="android:colorPrimaryDark">#009eff</item> -->
-
+    </style>
+    <style name="AppTheme.CustomPopTheme" >
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
 
 </resources>

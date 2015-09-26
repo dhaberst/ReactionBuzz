@@ -1,17 +1,59 @@
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 public class ThreePlayerGame extends AppCompatActivity {
+
+    Button oneplayerbutton;
+    Button twoplayerbutton;
+    Button threeplayerbutton;
+
+    public ButtonPress pressed = new ButtonPress();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.threeplayers);
+
+        oneplayerbutton = (Button)findViewById(R.id.oneplayerbutton);
+        twoplayerbutton = (Button)findViewById(R.id.twoplayerbutton);
+        threeplayerbutton = (Button)findViewById(R.id.threeplayerbutton);
+
+        oneplayerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressed.onPress(oneplayerbutton);
+                startActivity(new Intent(ThreePlayerGame.this, PlayOnePop.class));
+                pressed.onReset(oneplayerbutton);
+            }
+        });
+
+        // Player two's button
+        twoplayerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressed.onPress(twoplayerbutton);
+                startActivity(new Intent(ThreePlayerGame.this,PlayTwoPop.class));
+                pressed.onReset(twoplayerbutton);
+            }
+        });
+
+        // Player three's button
+        threeplayerbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                pressed.onPress(threeplayerbutton);
+                startActivity(new Intent(ThreePlayerGame.this,PlayThreePop.class));
+                pressed.onReset(threeplayerbutton);
+            }
+        });
     }
 
     @Override
@@ -23,11 +65,6 @@ public class ThreePlayerGame extends AppCompatActivity {
 
     public void buzzerstats(MenuItem menu) {
         Toast.makeText(this, "Buzzer Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void emailstats(MenuItem menu) {
-        Toast.makeText(this, "Email Stats", Toast.LENGTH_SHORT).show();
 
     }
 

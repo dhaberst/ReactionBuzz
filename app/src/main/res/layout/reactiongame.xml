@@ -5,8 +5,8 @@
     android:background="#84d0ff">
 
     <Button
-        android:layout_width="200dp"
-        android:layout_height="200dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         android:id="@+id/reactionbutton"
         android:background="@drawable/buttontransition"
         android:layout_marginTop="75dp"

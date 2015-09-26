@@ -16,5 +16,9 @@
     <string name="title_activity_two_player_game">Buzzer</string>
     <string name="title_activity_three_player_game">Buzzer</string>
     <string name="title_activity_four_player_game">Buzzer</string>
+    <string name="playeronebuzz">1</string>
+    <string name="playertwobuzz">2</string>
+    <string name="playerthreebuzz">3</string>
+    <string name="playerfourbuzz">4</string>
 
 </resources>

@@ -9,47 +9,23 @@ import java.util.ArrayList;
  * Created by Daniel on 2015-09-14.
  */
 
-public class reactionTime {
-
-    protected ArrayList<Float> reactionList;
-
-    public void addTime(Float time) {
-        reactionList.add(time);
-    }
+public class ButtonPress {
 
     public void onPress(Button buttonpress) {
-        // waiting 10 ms
-        try {
-            Thread.sleep(10);
-        } catch(InterruptedException ex) {
-            Thread.currentThread().interrupt();
-        }
+
         //changing button to a different color
         TransitionDrawable transition = (TransitionDrawable) buttonpress.getBackground();
         transition.startTransition(0);
-
-        //Start timer
 
         return;
     }
 
     public void onReset(Button buttonreset) {
 
-    }
-
-    public void clear() {
-
-    }
-
-    public void getMax() {
+        TransitionDrawable transition = (TransitionDrawable) buttonreset.getBackground();
+        transition.reverseTransition(0);
 
     }
 
-    public void getMin() {
 
-    }
-
-    public void getMedian() {
-
-    }
 }
