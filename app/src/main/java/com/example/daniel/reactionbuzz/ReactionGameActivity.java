@@ -1,6 +1,7 @@
 package com.example.daniel.reactionbuzz;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -9,8 +10,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.Random;
 
 public class ReactionGameActivity extends AppCompatActivity {
 
@@ -19,29 +19,44 @@ public class ReactionGameActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        final  Timer timer = new Timer();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactiongame);
 
         startActivity(new Intent(ReactionGameActivity.this, InfoPop.class));
+
+        final Handler handler = new Handler();
+
+        Random rand = new Random();
+        final int randomNum = rand.nextInt(20);
 
         reactionbutton = (Button)findViewById(R.id.reactionbutton);
         reactionbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 // waiting 10 ms
-                try {
-                    Thread.sleep(10);
-                } catch (InterruptedException ex) {
-                    Thread.currentThread().interrupt();
-                }
-                reactiontime.onPress(reactionbutton);
-                timer.schedule(new TimerTask() {
+                handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        // Code
                     }
-                }, 2000);
+                }, 10);
+
+                reactiontime.onPress(reactionbutton);
+
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        //Do something after 100ms*randomNum
+                        reactiontime.onReset(reactionbutton);
+                        final long startTime = System.nanoTime();
+                        reactionbutton.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                long endTime = System.nanoTime() - startTime;
+                                Toast.makeText(ReactionGameActivity.this, String.format("Time: %dms", endTime / 1000000), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
+                }, 100 * randomNum);
 
             }
         });

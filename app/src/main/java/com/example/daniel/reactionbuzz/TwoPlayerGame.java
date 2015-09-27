@@ -1,6 +1,7 @@
 package com.example.daniel.reactionbuzz;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -17,6 +18,9 @@ public class TwoPlayerGame extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
+        final Handler handler = new Handler();
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.twoplayers);
 
@@ -38,7 +42,7 @@ public class TwoPlayerGame extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 pressed.onPress(twoplayerbutton);
-                startActivity(new Intent(TwoPlayerGame.this,PlayTwoPop.class));
+                startActivity(new Intent(TwoPlayerGame.this, PlayTwoPop.class));
                 pressed.onReset(twoplayerbutton);
             }
         });

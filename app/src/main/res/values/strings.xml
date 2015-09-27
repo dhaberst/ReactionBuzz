@@ -20,11 +20,16 @@
     <string name="playertwobuzz">PLAYER 2\nBUZZED</string>
     <string name="playerthreebuzz">PLAYER 3\nBUZZED</string>
     <string name="playerfourbuzz">PLAYER 4\nBUZZED</string>
-    <string name="instructions">\nTo begin\npress the yellow button\nto start the timer\nwhen it turns to yellow again\nPRESS IT</string>
+    <string name="instructions">TO BEGIN,\nPRESS THE YELLOW BUTTON\nTO START THE TIMER.\nWHEN IT TURNS YELLOW\nPRESS IT!</string>
     <string name="numberone">1</string>
     <string name="numbertwo">2</string>
     <string name="numberthree">3</string>
     <string name="numberfour">4</string>
     <string name="welcome">Welcome</string>
+    <string name="twoplayer">2 Player</string>
+    <string name="threeplayer">3 Player</string>
+    <string name="fourplayer">4 Player</string>
+    <string name="title_activity_buzzer_stats">BuzzerStatsActivity</string>
+    <string name="clear">CLEAR</string>
 
 </resources>

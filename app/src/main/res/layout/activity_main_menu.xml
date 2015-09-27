@@ -19,7 +19,7 @@
         android:layout_centerHorizontal="true"
         android:textColor="#ffffff"
         android:textSize="20sp"
-        android:paddingStart="5sp"
+        android:paddingStart="10sp"
         android:paddingEnd="10sp" />
 
     <Button
@@ -28,10 +28,37 @@
         android:text="@string/Multiplayer"
         android:id="@+id/multiplayer"
         android:background="#009eff"
-        android:layout_marginTop="8sp"
+        android:layout_marginTop="8dp"
         android:layout_alignStart="@+id/singleplayer"
         android:layout_alignEnd="@+id/singleplayer"
         android:layout_below="@id/singleplayer"
         android:textColor="#ffffff"
         android:textSize="20sp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/buzzerstats"
+        android:id="@+id/buzzerstat"
+        android:background="#009eff"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:paddingStart="17sp"
+        android:paddingEnd="17sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reactionstats"
+        android:id="@+id/reactstat"
+        android:background="#009eff"
+        android:textSize="12sp"
+        android:textColor="#ffffff"
+        android:paddingStart="6sp"
+        android:paddingEnd="6sp"
+        android:layout_alignTop="@+id/buzzerstat"
+        android:layout_alignParentStart="true" />
+
 </RelativeLayout>

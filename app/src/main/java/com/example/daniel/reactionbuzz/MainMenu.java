@@ -29,13 +29,14 @@ public class MainMenu extends AppCompatActivity {
 
     Button singleplayerButton;
     Button multiplayerButton;
+    Button buzzerstats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
 
-        singleplayerButton = (Button) findViewById(R.id.singleplayer);
+        singleplayerButton = (Button)findViewById(R.id.singleplayer);
         singleplayerButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +45,22 @@ public class MainMenu extends AppCompatActivity {
             }
         });
 
-        multiplayerButton = (Button) findViewById(R.id.multiplayer);
+        multiplayerButton = (Button)findViewById(R.id.multiplayer);
         multiplayerButton.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this, NumberOfPlayers.class);
+                startActivity(intent);
+            }
+        });
+
+        buzzerstats = (Button)findViewById(R.id.buzzerstat);
+        buzzerstats.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, BuzzerStatsActivity.class);
                 startActivity(intent);
             }
         });
