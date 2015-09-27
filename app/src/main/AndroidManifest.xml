@@ -69,6 +69,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme">
         </activity>
+        <activity
+            android:name=".InfoPop"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.CustomPopTheme">
+        </activity>
 
     </application>
 

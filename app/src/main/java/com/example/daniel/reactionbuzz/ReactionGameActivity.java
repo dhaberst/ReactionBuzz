@@ -1,5 +1,6 @@
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -21,6 +22,8 @@ public class ReactionGameActivity extends AppCompatActivity {
         final  Timer timer = new Timer();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactiongame);
+
+        startActivity(new Intent(ReactionGameActivity.this, InfoPop.class));
 
         reactionbutton = (Button)findViewById(R.id.reactionbutton);
         reactionbutton.setOnClickListener(new View.OnClickListener() {

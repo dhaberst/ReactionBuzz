@@ -12,7 +12,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="@string/playeronebuzz"
+        android:text="@string/numberone"
         android:textSize="70sp" />
 
     <Button
@@ -24,6 +24,6 @@
         android:layout_alignStart="@+id/oneplayerbutton"
         android:layout_marginBottom="10dp"
         android:textSize="70sp"
-        android:text="@string/playertwobuzz" />
+        android:text="@string/numbertwo" />
 
 </RelativeLayout>

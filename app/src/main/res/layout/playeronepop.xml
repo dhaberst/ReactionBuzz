@@ -10,8 +10,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/playeronebuzz"
         android:id="@+id/playerone"
-        android:textSize="130dp"
-        android:textAlignment="center"
+        android:textSize="35sp"
+        android:gravity="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" >
     </TextView>

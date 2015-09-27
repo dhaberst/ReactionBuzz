@@ -7,13 +7,13 @@ import android.util.DisplayMetrics;
 /**
  * Created by Daniel on 2015-09-26.
  */
-public class PlayTwoPop extends Activity {
+public class InfoPop extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.playertwopop);
+        setContentView(R.layout.reactioninstructions);
 
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
@@ -21,6 +21,7 @@ public class PlayTwoPop extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.5), (int)(height*.15));
+        getWindow().setLayout((int) (width * .7), (int) (height * .32));
     }
+
 }

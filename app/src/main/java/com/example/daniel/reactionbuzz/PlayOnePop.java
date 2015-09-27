@@ -21,6 +21,6 @@ public class PlayOnePop extends Activity {
         int width = dm.widthPixels;
         int height = dm.heightPixels;
 
-        getWindow().setLayout((int)(width*.25), (int)(height*.30));
+        getWindow().setLayout((int)(width*.5), (int)(height*.15));
     }
 }

@@ -16,9 +16,15 @@
     <string name="title_activity_two_player_game">Buzzer</string>
     <string name="title_activity_three_player_game">Buzzer</string>
     <string name="title_activity_four_player_game">Buzzer</string>
-    <string name="playeronebuzz">1</string>
-    <string name="playertwobuzz">2</string>
-    <string name="playerthreebuzz">3</string>
-    <string name="playerfourbuzz">4</string>
+    <string name="playeronebuzz">PLAYER 1\nBUZZED</string>
+    <string name="playertwobuzz">PLAYER 2\nBUZZED</string>
+    <string name="playerthreebuzz">PLAYER 3\nBUZZED</string>
+    <string name="playerfourbuzz">PLAYER 4\nBUZZED</string>
+    <string name="instructions">\nTo begin\npress the yellow button\nto start the timer\nwhen it turns to yellow again\nPRESS IT</string>
+    <string name="numberone">1</string>
+    <string name="numbertwo">2</string>
+    <string name="numberthree">3</string>
+    <string name="numberfour">4</string>
+    <string name="welcome">Welcome</string>
 
 </resources>

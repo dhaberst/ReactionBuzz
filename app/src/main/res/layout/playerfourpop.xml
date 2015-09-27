@@ -9,8 +9,8 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:text="@string/playerfourbuzz"
         android:id="@+id/playerfour"
-        android:textSize="130sp"
-        android:textAlignment="center"
+        android:textSize="35sp"
+        android:gravity="center"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true" />
 
