@@ -77,6 +77,12 @@
             android:name=".BuzzerStatsActivity"
             android:label="@string/title_activity_buzzer_stats"
             android:parentActivityName=".MainMenu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".ReactionStatsActivity"
+            android:label="@string/title_activity_reaction_stats"
+            android:parentActivityName=".MainMenu"
             android:screenOrientation="portrait">
         </activity>
     </application>

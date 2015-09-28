@@ -1,15 +1,17 @@
 <resources>
-
-    <!-- Base application theme. -->
+        <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#009eff</item>
         <item name="android:textColorPrimary">#ffffff</item>
-        <!-- <item name="android:colorPrimaryDark">#009eff</item> -->
     </style>
     <style name="AppTheme.CustomPopTheme" >
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
+    </style>
+    <style name="Theme_Dialog" parent="AlertDialog.AppCompat.Light">
+        <item name="android:textColorPrimary">#000000</item>
+        <item name="android:gravity">center</item>
     </style>
 
 </resources>

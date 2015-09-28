@@ -31,5 +31,6 @@
     <string name="fourplayer">4 Player</string>
     <string name="title_activity_buzzer_stats">BuzzerStatsActivity</string>
     <string name="clear">CLEAR</string>
+    <string name="title_activity_reaction_stats">ReactionStatsActivity</string>
 
 </resources>

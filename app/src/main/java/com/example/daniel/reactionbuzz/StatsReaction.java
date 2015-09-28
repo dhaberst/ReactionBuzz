@@ -7,13 +7,13 @@ import java.util.ArrayList;
  */
 public class StatsReaction {
 
-    protected ArrayList<Float> reactionList;
+    protected ArrayList<Long> reactionList;
 
-    public void addTime(Float time) {
+    public void addTime(long time) {
         reactionList.add(time);
     }
 
-    public ArrayList returnList() {
+    public ArrayList<Long> returnList() {
         return reactionList;
     }
 
