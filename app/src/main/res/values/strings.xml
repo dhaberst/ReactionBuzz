@@ -32,5 +32,9 @@
     <string name="title_activity_buzzer_stats">BuzzerStatsActivity</string>
     <string name="clear">CLEAR</string>
     <string name="title_activity_reaction_stats">ReactionStatsActivity</string>
+    <string name="Ok">Ok</string>
+    <string name="title_activity_reactionstats">REACTION STATISTICS</string>
+    <string name="title_activity_buzzerstats">BUZZER STATISTICS</string>
+
 
 </resources>

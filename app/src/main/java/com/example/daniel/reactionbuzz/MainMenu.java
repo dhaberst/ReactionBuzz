@@ -30,6 +30,7 @@ public class MainMenu extends AppCompatActivity {
     Button singleplayerButton;
     Button multiplayerButton;
     Button buzzerstats;
+    Button reactionstats;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,16 @@ public class MainMenu extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainMenu.this, BuzzerStatsActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        reactionstats = (Button)findViewById(R.id.reactstat);
+        reactionstats.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainMenu.this, ReactionStatsActivity.class);
                 startActivity(intent);
             }
         });

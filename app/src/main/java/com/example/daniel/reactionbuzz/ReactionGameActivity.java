@@ -39,6 +39,8 @@ public class ReactionGameActivity extends AppCompatActivity {
 
     final Handler handler = new Handler();
 
+    Boolean validPress = true;
+
     Runnable reactionTimer = new Runnable() {
         @Override
         public void run() {
@@ -48,9 +50,10 @@ public class ReactionGameActivity extends AppCompatActivity {
             reactionbutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     long endTime = (System.nanoTime() - startTime)/1000000;
-                    //statistics.addTime(endTime);
-                    //saveInFile();
+                    statistics.addTime(endTime);
+                    saveInFile();
                     reactionReturnDialog("Your time was "+ String.valueOf(endTime)+"ms!");
                 }
             });
@@ -62,7 +65,7 @@ public class ReactionGameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactiongame);
 
-        //loadFromFile();
+        loadFromFile();
 
         startActivity(new Intent(ReactionGameActivity.this, InfoPop.class));
 
@@ -130,7 +133,9 @@ public class ReactionGameActivity extends AppCompatActivity {
 
         reactiontime.onPress(reactionbutton);
 
+        // Runnable
         handler.postDelayed(reactionTimer, (int) randomTime());
+
     }
 
     //Derived from from 301 lab

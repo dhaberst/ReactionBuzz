@@ -71,17 +71,17 @@
         <activity
             android:name=".InfoPop"
             android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.CustomPopTheme" >
+            android:theme="@style/AppTheme.CustomPopTheme2" >
         </activity>
         <activity
             android:name=".BuzzerStatsActivity"
-            android:label="@string/title_activity_buzzer_stats"
+            android:label="@string/title_activity_buzzerstats"
             android:parentActivityName=".MainMenu"
             android:screenOrientation="portrait" >
         </activity>
         <activity
             android:name=".ReactionStatsActivity"
-            android:label="@string/title_activity_reaction_stats"
+            android:label="@string/title_activity_reactionstats"
             android:parentActivityName=".MainMenu"
             android:screenOrientation="portrait">
         </activity>

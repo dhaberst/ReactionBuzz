@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class StatsReaction {
 
-    protected ArrayList<Long> reactionList;
+    protected ArrayList<Long> reactionList = new ArrayList<>();
 
     public void addTime(long time) {
         reactionList.add(time);
