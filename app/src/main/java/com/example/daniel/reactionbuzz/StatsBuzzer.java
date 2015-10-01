@@ -25,15 +25,21 @@ public class StatsBuzzer {
         }
     }
 
-    public Integer[] getTwoplayerbuzzer() {
-        return twoplayerbuzzer;
+    public int getTwoplayerbuzzer(int index) {
+        return twoplayerbuzzer[index];
     }
 
-    public Integer[] getThreeplayerbuzzer() {
-        return threeplayerbuzzer;
+    public int getThreeplayerbuzzer(int index) {
+        return threeplayerbuzzer[index];
     }
 
-    public Integer[] getFourplayerbuzzer() {
-        return fourplayerbuzzer;
+    public int getFourplayerbuzzer(int index) {
+        return fourplayerbuzzer[index];
+    }
+
+    public void clear() {
+        Integer twoplayerbuzzer[] = {0, 0};
+        Integer threeplayerbuzzer[] = {0, 0, 0};
+        Integer fourplayerbuzzer[] = {0, 0, 0, 0};
     }
 }

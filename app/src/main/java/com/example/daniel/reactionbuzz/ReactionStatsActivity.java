@@ -10,10 +10,13 @@ import android.widget.ListView;
 import com.google.gson.Gson;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
 
 public class ReactionStatsActivity extends AppCompatActivity {
 
@@ -30,7 +33,7 @@ public class ReactionStatsActivity extends AppCompatActivity {
         setContentView(R.layout.reactionstats);
         loadFromFile();
         listView = (ListView) findViewById(R.id.statsView);
-        reactionAdapter = new ArrayAdapter<Long>(this, android.R.layout.simple_list_item_1, statistics.returnList());
+        reactionAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, statistics.returnList());
         listView.setAdapter(reactionAdapter);
     }
 
@@ -66,6 +69,23 @@ public class ReactionStatsActivity extends AppCompatActivity {
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
             statistics = new StatsReaction();
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void saveInFile() {
+        try {
+            FileOutputStream fos = openFileOutput(FILENAME, 0);
+            BufferedWriter out = new BufferedWriter(new OutputStreamWriter(fos));
+            Gson gson = new Gson();
+            gson.toJson(statistics, out);
+            out.flush();
+            fos.close();
+        } catch (FileNotFoundException e) {
+            // TODO Auto-generated catch block
+            throw new RuntimeException(e);
         } catch (IOException e) {
             // TODO Auto-generated catch block
             throw new RuntimeException(e);

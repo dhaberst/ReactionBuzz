@@ -52,19 +52,17 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
         android:id="@+id/twoplayerstats"
         android:layout_below="@+id/textView2"
         android:layout_alignStart="@+id/textView2"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="16dp" />
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
         android:id="@+id/threeplayerstats"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/textView3"
         android:layout_alignStart="@+id/textView3" />
 
@@ -72,9 +70,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Large Text"
         android:id="@+id/fourplayerstats"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="16dp"
         android:layout_below="@+id/textView4"
         android:layout_alignStart="@+id/textView4" />
 

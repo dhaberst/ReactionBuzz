@@ -18,7 +18,7 @@ public class StatsReaction {
     }
 
     public void clear() {
-
+        reactionList.clear();
     }
 
     public void getMax() {
