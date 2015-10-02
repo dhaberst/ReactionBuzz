@@ -57,8 +57,8 @@ public class NumberOfPlayers extends AppCompatActivity {
     }
 
     public void buzzerstats(MenuItem menu) {
-        Toast.makeText(this, "Buzzer Stats", Toast.LENGTH_SHORT).show();
-
+        Intent intent = new Intent(NumberOfPlayers.this, BuzzerStatsActivity.class);
+        startActivity(intent);
     }
 
     @Override
@@ -69,9 +69,9 @@ public class NumberOfPlayers extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }

@@ -84,16 +84,6 @@ public class MainMenu extends AppCompatActivity {
         return true;
     }
 
-    public void reactionstats(MenuItem menu) {
-        Toast.makeText(this, "Reaction Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
-    public void buzzerstats(MenuItem menu) {
-        Toast.makeText(this, "Buzzer Stats", Toast.LENGTH_SHORT).show();
-
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
@@ -102,9 +92,9 @@ public class MainMenu extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }

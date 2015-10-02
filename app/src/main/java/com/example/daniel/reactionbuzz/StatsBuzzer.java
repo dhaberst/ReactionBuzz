@@ -1,6 +1,7 @@
 package com.example.daniel.reactionbuzz;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /**
  * Created by Daniel on 2015-09-27.
@@ -38,8 +39,8 @@ public class StatsBuzzer {
     }
 
     public void clear() {
-        Integer twoplayerbuzzer[] = {0, 0};
-        Integer threeplayerbuzzer[] = {0, 0, 0};
-        Integer fourplayerbuzzer[] = {0, 0, 0, 0};
+        Arrays.fill(twoplayerbuzzer, 0);
+        Arrays.fill(threeplayerbuzzer, 0);
+        Arrays.fill(fourplayerbuzzer, 0);
     }
 }

@@ -4,7 +4,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.gson.Gson;
 
@@ -23,9 +27,13 @@ public class BuzzerStatsActivity extends AppCompatActivity {
 
     StatsBuzzer statsbuzzer = new StatsBuzzer();
 
+    RelativeLayout relativelayout;
+
     TextView playerTwosText;
     TextView playerThreesText;
     TextView playerFoursText;
+
+    Button clear;
 
     int playerone = 0;
     int playertwo = 1;
@@ -43,8 +51,11 @@ public class BuzzerStatsActivity extends AppCompatActivity {
         playerThreesText = (TextView)findViewById(R.id.threeplayerstats);
         playerFoursText = (TextView)findViewById(R.id.fourplayerstats);
 
+        clear = (Button)findViewById(R.id.clearbutton);
+
         playerTwosText.setText("Player 1 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playerone))
                 +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playertwo)));
+
 
         playerThreesText.setText("Player 1 buzzes: "+Integer.toString(statsbuzzer.getThreeplayerbuzzer(playerone))
                 +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getThreeplayerbuzzer(playertwo))
@@ -54,6 +65,28 @@ public class BuzzerStatsActivity extends AppCompatActivity {
                 +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playertwo))
                 +"\nPlayer 3 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playerthree))
                 +"\nPlayer 4 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playerfour)));
+
+        clear.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                statsbuzzer.clear();
+                saveInFile();
+
+                playerTwosText.setText("Player 1 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playerone))
+                        +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playertwo)));
+
+                playerThreesText.setText("Player 1 buzzes: " + Integer.toString(statsbuzzer.getThreeplayerbuzzer(playerone))
+                        + "\nPlayer 2 buzzes: " + Integer.toString(statsbuzzer.getThreeplayerbuzzer(playertwo))
+                        + "\nPlayer 3 buzzes: " + Integer.toString(statsbuzzer.getThreeplayerbuzzer(playerthree)));
+
+                playerFoursText.setText("Player 1 buzzes: " + Integer.toString(statsbuzzer.getFourplayerbuzzer(playerone))
+                        + "\nPlayer 2 buzzes: " + Integer.toString(statsbuzzer.getFourplayerbuzzer(playertwo))
+                        + "\nPlayer 3 buzzes: " + Integer.toString(statsbuzzer.getFourplayerbuzzer(playerthree))
+                        + "\nPlayer 4 buzzes: " + Integer.toString(statsbuzzer.getFourplayerbuzzer(playerfour)));
+            }
+        });
     }
 
     @Override
@@ -71,9 +104,9 @@ public class BuzzerStatsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }

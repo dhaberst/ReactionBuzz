@@ -50,7 +50,6 @@ public class ReactionGameActivity extends AppCompatActivity {
             reactionbutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
                     long endTime = (System.nanoTime() - startTime)/1000000;
                     statistics.addTime(endTime);
                     saveInFile();
@@ -80,7 +79,8 @@ public class ReactionGameActivity extends AppCompatActivity {
     }
 
     public void reactionstats(MenuItem menu) {
-        Toast.makeText(this, "Reaction Stats", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(ReactionGameActivity.this, ReactionStatsActivity.class);
+        startActivity(intent);
 
     }
 
@@ -92,9 +92,9 @@ public class ReactionGameActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }
@@ -132,7 +132,6 @@ public class ReactionGameActivity extends AppCompatActivity {
     public void onClickTimer() {
 
         reactiontime.onPress(reactionbutton);
-
         // Runnable
         handler.postDelayed(reactionTimer, (int) randomTime());
 

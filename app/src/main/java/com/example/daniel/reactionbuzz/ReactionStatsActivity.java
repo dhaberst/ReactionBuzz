@@ -4,7 +4,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.google.gson.Gson;
@@ -22,6 +24,8 @@ public class ReactionStatsActivity extends AppCompatActivity {
 
     ListView listView;
 
+    Button clear;
+
     private static final String FILENAME = "reactStat.sav";
 
     private ArrayAdapter<Long> reactionAdapter;
@@ -31,10 +35,24 @@ public class ReactionStatsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.reactionstats);
+
         loadFromFile();
+
         listView = (ListView) findViewById(R.id.statsView);
+        clear = (Button)findViewById(R.id.clearbutton);
+
         reactionAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, statistics.returnList());
         listView.setAdapter(reactionAdapter);
+
+        clear.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                statistics.clear();
+                saveInFile();
+                reactionAdapter.notifyDataSetChanged();
+            }
+        });
     }
 
     @Override
@@ -52,9 +70,9 @@ public class ReactionStatsActivity extends AppCompatActivity {
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
+        //if (id == R.id.action_settings) {
+            //return true;
+        //}
 
         return super.onOptionsItemSelected(item);
     }
