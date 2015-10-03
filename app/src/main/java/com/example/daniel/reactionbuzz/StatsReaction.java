@@ -26,7 +26,7 @@ public class StatsReaction {
     }
 
     public Long getMax(int number) {
-        if (reactionList.size() > number) {
+        if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
             return Collections.max(lastNumber);
@@ -36,7 +36,7 @@ public class StatsReaction {
     }
 
     public Long getMin(int number) {
-        if (reactionList.size() > number) {
+        if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
             return Collections.min(lastNumber);
@@ -47,7 +47,7 @@ public class StatsReaction {
     }
 
     public Long getMedian(int number) {
-        if (reactionList.size() > number) {
+        if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
             Collections.sort(lastNumber);
@@ -79,7 +79,7 @@ public class StatsReaction {
         int len = reactionList.size();
 
         for (int i = 0; i < len; i++) {
-            list += reactionList.get(i).toString();
+            list = list+reactionList.get(i).toString()+"ms\n";
         }
         return list;
     }

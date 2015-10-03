@@ -24,6 +24,11 @@ public class EmailPop extends Activity {
     Button send;
     EditText email;
 
+    int playerone = 0;
+    int playertwo = 1;
+    int playerthree = 2;
+    int playerfour = 3;
+
     private static final String FILENAME1 = "buzzerStat.sav";
     private static final String FILENAME2 = "reactStat.sav";
 
@@ -40,7 +45,22 @@ public class EmailPop extends Activity {
         loadFromFileReaction();
         loadFromFileBuzzer();
 
-        String emailstats = statistics.returnArrayList()+"";
+        final String emailstats = "REACTION TIME STATISTICS:\n\n"
+                +statistics.returnArrayList()+"\n"
+                +statistics.getTextView()+"\n\n"
+                +"BUZZER COUNTS:\n\n"
+                +"2 Players\n\n"
+                +"Player 1 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playerone))
+                +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getTwoplayerbuzzer(playertwo))
+                +"\n\n3 Players\n\n"
+                +"Player 1 buzzes: "+Integer.toString(statsbuzzer.getThreeplayerbuzzer(playerone))
+                +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getThreeplayerbuzzer(playertwo))
+                +"\nPlayer 3 buzzes: "+Integer.toString(statsbuzzer.getThreeplayerbuzzer(playerthree))
+                +"\n\n4 Players\n\n"
+                +"Player 1 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playerone))
+                +"\nPlayer 2 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playertwo))
+                +"\nPlayer 3 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playerthree))
+                +"\nPlayer 4 buzzes: "+Integer.toString(statsbuzzer.getFourplayerbuzzer(playerfour));
 
         send = (Button) findViewById(R.id.send);
         email = (EditText) findViewById(R.id.enteremail);
@@ -58,11 +78,12 @@ public class EmailPop extends Activity {
             public void onClick(View v) {
                 String to = email.getText().toString();
 
-                Intent i = new Intent(Intent.ACTION_SEND);
-                i.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
-                //i.putExtra(Intent.EXTRA_TEXT,emailstats);
-                i.setType("meassge/rfc822");
-                startActivity(Intent.createChooser(i, "choose:"));
+                Intent email = new Intent(Intent.ACTION_SEND);
+                email.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
+                email.putExtra(Intent.EXTRA_SUBJECT,"ReactionBuzz Statistics");
+                email.putExtra(Intent.EXTRA_TEXT,emailstats);
+                email.setType("meassge/rfc822");
+                startActivity(Intent.createChooser(email, "choose:"));
 
                 finish();
             }
