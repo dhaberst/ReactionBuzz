@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import com.google.gson.Gson;
 
@@ -23,7 +24,7 @@ import java.io.OutputStreamWriter;
 public class ReactionStatsActivity extends AppCompatActivity {
 
     ListView listView;
-
+    TextView infoView;
     Button clear;
 
     private static final String FILENAME = "reactStat.sav";
@@ -40,9 +41,12 @@ public class ReactionStatsActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.statsView);
         clear = (Button)findViewById(R.id.clearbutton);
+        infoView = (TextView)findViewById(R.id.InfoView);
 
         reactionAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, statistics.returnList());
         listView.setAdapter(reactionAdapter);
+
+        infoView.setText(statistics.getTextView());
 
         clear.setOnClickListener(new View.OnClickListener() {
 
@@ -51,6 +55,7 @@ public class ReactionStatsActivity extends AppCompatActivity {
                 statistics.clear();
                 saveInFile();
                 reactionAdapter.notifyDataSetChanged();
+                infoView.setText(statistics.getTextView());
             }
         });
     }
