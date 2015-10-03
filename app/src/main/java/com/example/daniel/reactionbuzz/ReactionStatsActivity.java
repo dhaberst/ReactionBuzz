@@ -1,5 +1,6 @@
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,7 +31,7 @@ public class ReactionStatsActivity extends AppCompatActivity {
     private static final String FILENAME = "reactStat.sav";
 
     private ArrayAdapter<Long> reactionAdapter;
-    private StatsReaction statistics;
+    private StatsReaction statistics = new StatsReaction();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,6 +81,12 @@ public class ReactionStatsActivity extends AppCompatActivity {
         //}
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void emailstats(MenuItem menu) {
+        Intent intent = new Intent(ReactionStatsActivity.this, EmailPop.class);
+        startActivity(intent);
+
     }
 
     private void loadFromFile() {

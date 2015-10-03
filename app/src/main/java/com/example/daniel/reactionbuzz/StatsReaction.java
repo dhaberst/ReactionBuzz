@@ -58,7 +58,7 @@ public class StatsReaction {
     }
 
     public Long getAverage(int number) {
-        if (reactionList.size() > number) {
+        if (reactionList.size() >= number) {
 
             Long avg = 0L;
 
@@ -71,6 +71,17 @@ public class StatsReaction {
             return avg/number;
         }
         return 0L;
+    }
+
+    public String returnArrayList() {
+        String list = "";
+
+        int len = reactionList.size();
+
+        for (int i = 0; i < len; i++) {
+            list += reactionList.get(i).toString();
+        }
+        return list;
     }
 
     public String getTextView() {

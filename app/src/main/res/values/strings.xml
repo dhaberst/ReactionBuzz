@@ -35,6 +35,8 @@
     <string name="Ok">Ok</string>
     <string name="title_activity_reactionstats">REACTION STATISTICS</string>
     <string name="title_activity_buzzerstats">BUZZER STATISTICS</string>
-
+    <string name="emailtitle">Please Enter\nYour Email</string>
+    <string name="send">Send</string>
+    <string name="title_activity_email_pop">EmailPop</string>
 
 </resources>

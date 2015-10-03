@@ -83,8 +83,10 @@
             android:name=".ReactionStatsActivity"
             android:label="@string/title_activity_reactionstats"
             android:parentActivityName=".MainMenu"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
         </activity>
     </application>
+
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
 
 </manifest>

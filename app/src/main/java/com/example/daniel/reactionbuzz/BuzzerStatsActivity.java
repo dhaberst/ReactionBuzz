@@ -1,5 +1,6 @@
 package com.example.daniel.reactionbuzz;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -26,8 +27,6 @@ public class BuzzerStatsActivity extends AppCompatActivity {
     private static final String FILENAME = "buzzerStat.sav";
 
     StatsBuzzer statsbuzzer = new StatsBuzzer();
-
-    RelativeLayout relativelayout;
 
     TextView playerTwosText;
     TextView playerThreesText;
@@ -110,6 +109,13 @@ public class BuzzerStatsActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
+    public void emailstats(MenuItem menu) {
+        Intent intent = new Intent(BuzzerStatsActivity.this, EmailPop.class);
+        startActivity(intent);
+
+    }
+
 
     //Derived from from 301 lab
     private void loadFromFile() {
