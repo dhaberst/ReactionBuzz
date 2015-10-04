@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.daniel.reactionbuzz" >
+    package="com.ualberta.daniel.reactionbuzz" >
 
     <application
         android:allowBackup="true"
@@ -9,7 +9,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".MainMenu"
+            android:name="com.ualberta.daniel.reactionbuzz.MainMenu"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
             <intent-filter>
@@ -19,81 +19,76 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ReactionGameActivity"
+            android:name="com.ualberta.daniel.reactionbuzz.ReactionGameActivity"
             android:label="@string/title_activity_reaction_game"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.MainMenu"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".NumberOfPlayers"
+            android:name="com.ualberta.daniel.reactionbuzz.NumberOfPlayers"
             android:label="@string/title_activity_number_of_players"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.MainMenu"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".TwoPlayerGame"
+            android:name="com.ualberta.daniel.reactionbuzz.TwoPlayerGame"
             android:label="@string/title_activity_two_player_game"
-            android:parentActivityName=".NumberOfPlayers"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.NumberOfPlayers"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ThreePlayerGame"
+            android:name="com.ualberta.daniel.reactionbuzz.ThreePlayerGame"
             android:label="@string/title_activity_three_player_game"
-            android:parentActivityName=".NumberOfPlayers"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.NumberOfPlayers"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".FourPlayerGame"
+            android:name="com.ualberta.daniel.reactionbuzz.FourPlayerGame"
             android:label="@string/title_activity_four_player_game"
-            android:parentActivityName=".NumberOfPlayers"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.NumberOfPlayers"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".PlayOnePop"
+            android:name="com.ualberta.daniel.reactionbuzz.PlayOnePop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme" >
         </activity>
         <activity
-            android:name=".PlayTwoPop"
+            android:name="com.ualberta.daniel.reactionbuzz.PlayTwoPop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme" >
         </activity>
         <activity
-            android:name=".PlayThreePop"
+            android:name="com.ualberta.daniel.reactionbuzz.PlayThreePop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme" >
         </activity>
         <activity
-            android:name=".PlayFourPop"
+            android:name="com.ualberta.daniel.reactionbuzz.PlayFourPop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme" >
         </activity>
         <activity
-            android:name=".InfoPop"
+            android:name="com.ualberta.daniel.reactionbuzz.InfoPop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme2" >
         </activity>
         <activity
-            android:name=".BuzzerStatsActivity"
+            android:name="com.ualberta.daniel.reactionbuzz.BuzzerStatsActivity"
             android:label="@string/title_activity_buzzerstats"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.MainMenu"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".ReactionStatsActivity"
+            android:name="com.ualberta.daniel.reactionbuzz.ReactionStatsActivity"
             android:label="@string/title_activity_reactionstats"
-            android:parentActivityName=".MainMenu"
+            android:parentActivityName="com.ualberta.daniel.reactionbuzz.MainMenu"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".EmailPop"
+            android:name="com.ualberta.daniel.reactionbuzz.EmailPop"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.CustomPopTheme2">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
     </application>
 
