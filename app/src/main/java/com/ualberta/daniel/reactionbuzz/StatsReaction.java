@@ -50,6 +50,8 @@ public class StatsReaction {
         if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
+            // http://stackoverflow.com/questions/1669282/find-max-value-in-java-with-a-predefined-comparator
+            // Users: Michael Myers | Accessed: 10/3/2015
             return Collections.max(lastNumber);
         }
 
@@ -60,6 +62,8 @@ public class StatsReaction {
         if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
+            // http://stackoverflow.com/questions/1669282/find-max-value-in-java-with-a-predefined-comparator
+            // Users: Michael Myers | Accessed: 10/3/2015
             return Collections.min(lastNumber);
         }
 
@@ -71,6 +75,8 @@ public class StatsReaction {
         if (reactionList.size() >= number) {
             ArrayList<Long> lastNumber = getLastNumberOf(number);
 
+            // http://stackoverflow.com/questions/18441846/how-to-sort-an-arraylist-in-java
+            // Users: bmthaker | Accessed: 10/3/2015
             Collections.sort(lastNumber);
 
             return lastNumber.get(number / 2);

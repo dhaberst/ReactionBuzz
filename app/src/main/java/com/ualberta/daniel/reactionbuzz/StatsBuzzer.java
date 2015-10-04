@@ -61,6 +61,8 @@ public class StatsBuzzer {
     }
 
     public void clear() {
+        // http://stackoverflow.com/questions/9128737/fastest-way-to-set-all-values-of-an-array
+        // User: Kurt Du Bois | Accessed: 10/1/2015
         Arrays.fill(twoplayerbuzzer, 0);
         Arrays.fill(threeplayerbuzzer, 0);
         Arrays.fill(fourplayerbuzzer, 0);

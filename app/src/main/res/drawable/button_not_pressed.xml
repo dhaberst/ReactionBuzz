@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<!-- http://stackoverflow.com/questions/28816813/circle-button-in-android -->
+<!-- User: KostasMatrix | Accessed: 09/13/2015 -->
 <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
     <solid android:color="#fffc00" />
     <corners android:radius="30dp"></corners>

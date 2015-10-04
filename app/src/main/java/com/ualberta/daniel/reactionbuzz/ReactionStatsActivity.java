@@ -65,6 +65,10 @@ public class ReactionStatsActivity extends AppCompatActivity {
 
         listView = (ListView) findViewById(R.id.statsView);
         clear = (Button)findViewById(R.id.clearbutton);
+
+        // http://stackoverflow.com/questions/22573299/how-can-i-change-the-text-with-a-button-click-android-studio-xml
+        // User: Tanuj Wadhwa | Accessed: 10/01/2015
+        // Comments: Including setText Commands
         infoView = (TextView)findViewById(R.id.InfoView);
 
         reactionAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, statistics.returnList());
@@ -112,12 +116,14 @@ public class ReactionStatsActivity extends AppCompatActivity {
 
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
-            // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html, 2015/09/23
             statistics = gson.fromJson(in, StatsReaction.class);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -128,6 +134,9 @@ public class ReactionStatsActivity extends AppCompatActivity {
         }
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);

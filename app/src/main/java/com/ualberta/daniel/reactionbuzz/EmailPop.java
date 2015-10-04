@@ -1,21 +1,3 @@
-package com.ualberta.daniel.reactionbuzz;
-
-import android.app.Activity;
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-
-import com.google.gson.Gson;
-
-import java.io.BufferedReader;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /* The MIT License (MIT)
 
         Copyright (c) 2015 dhaberst
@@ -38,6 +20,25 @@ import java.io.InputStreamReader;
         OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
         SOFTWARE.
 */
+
+package com.ualberta.daniel.reactionbuzz;
+
+import android.app.Activity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.DisplayMetrics;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.gson.Gson;
+
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 /**
  * Created by Daniel on 2015-09-26.
@@ -88,6 +89,8 @@ public class EmailPop extends Activity {
         send = (Button) findViewById(R.id.send);
         email = (EditText) findViewById(R.id.enteremail);
 
+        //https://www.youtube.com/watch?v=fn5OlqQuOCk
+        // User: Filip Vujovic | Accessed 09/26/2015
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -101,6 +104,8 @@ public class EmailPop extends Activity {
             public void onClick(View v) {
                 String to = email.getText().toString();
 
+                // http://www.c-sharpcorner.com/UploadFile/1e5156/sendemail-in-android-using-android-studio/
+                // Author Amir Ali | Accessed: 10/3/2015
                 Intent email = new Intent(Intent.ACTION_SEND);
                 email.putExtra(Intent.EXTRA_EMAIL, new String[]{to});
                 email.putExtra(Intent.EXTRA_SUBJECT, "ReactionBuzz Statistics");
@@ -108,17 +113,21 @@ public class EmailPop extends Activity {
                 email.setType("meassge/rfc822");
                 startActivity(Intent.createChooser(email, "choose:"));
 
+                // http://stackoverflow.com/questions/22892732/android-close-activity-on-button-click
+                // User: Raghunandan | Accessed: 09/26/2015
                 finish();
             }
         });
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void loadFromFileBuzzer() {
         try {
             FileInputStream fis = openFileInput(FILENAME1);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
-            // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html, 2015/09/23
             statsbuzzer = gson.fromJson(in, StatsBuzzer.class);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -129,12 +138,14 @@ public class EmailPop extends Activity {
         }
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void loadFromFileReaction() {
         try {
             FileInputStream fis = openFileInput(FILENAME2);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
-            // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html, 2015/09/23
             statistics = gson.fromJson(in, StatsReaction.class);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block

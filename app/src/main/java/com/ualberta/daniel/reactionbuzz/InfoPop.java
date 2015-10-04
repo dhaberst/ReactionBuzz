@@ -36,6 +36,8 @@ public class InfoPop extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        //https://www.youtube.com/watch?v=fn5OlqQuOCk
+        // User: Filip Vujovic | Accessed 09/26/2015
         setContentView(R.layout.reactioninstructions);
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);

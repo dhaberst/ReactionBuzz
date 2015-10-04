@@ -139,13 +139,14 @@ public class ThreePlayerGame extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //Derived from from 301 lab
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
-            // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html, 2015/09/23
             statsbuzzer = gson.fromJson(in, StatsBuzzer.class);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -156,6 +157,9 @@ public class ThreePlayerGame extends AppCompatActivity {
         }
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);

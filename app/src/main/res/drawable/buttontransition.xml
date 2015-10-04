@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- http://stackoverflow.com/questions/28816813/circle-button-in-android -->
+<!-- User: KostasMatrix | Accessed: 09/13/2015 -->
 <transition xmlns:android="http://schemas.android.com/apk/res/android">
     <!-- The drawables used here can be solid colors, gradients, shapes, images, etc. -->
     <item android:drawable="@drawable/button_not_pressed" />

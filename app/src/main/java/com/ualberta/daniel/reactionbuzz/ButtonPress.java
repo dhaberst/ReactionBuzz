@@ -30,6 +30,9 @@ import android.widget.Button;
  * Created by Daniel on 2015-09-14.
  */
 
+
+// http://stackoverflow.com/questions/2614545/animate-change-of-view-background-color-in-android
+// User: idolize | Accessed: 09/14/2015
 public class ButtonPress {
 
     public void onPress(Button buttonpress) {
@@ -47,6 +50,4 @@ public class ButtonPress {
         transition.reverseTransition(0);
 
     }
-
-
 }

@@ -59,6 +59,9 @@ public class ReactionGameActivity extends AppCompatActivity {
     final int minTime = 10;
     final int maxTime = 2000;
 
+
+    // http://stackoverflow.com/questions/19873063/handler-is-abstract-cannot-be-instantiated
+    // User: Chinmay Dabke, Glenn-- | Accessed: 09/27/2014
     final Handler handler = new Handler();
 
     Runnable reactionTimer = new Runnable() {
@@ -119,12 +122,15 @@ public class ReactionGameActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    //stackoverflow: http://stackoverflow.com/questions/6029495/how-can-i-generate-random-number-in-specific-range-in-android
+    // http://stackoverflow.com/questions/6029495/how-can-i-generate-random-number-in-specific-range-in-android
+    // User: Mr.Polywhirl | Accessed: 09/27/2015
     public long randomTime(){
         Random random = new Random();
         return random.nextInt(maxTime - minTime) + minTime;
     }
 
+    // http://stackoverflow.com/questions/2422562/how-to-change-theme-for-alertdialog
+    // User: Min Soo Kim, Brais Gabin | Accessed: 09/28/2015
     public void reactionReturnDialog(String message) {
         AlertDialog.Builder builder = new AlertDialog.Builder(new ContextThemeWrapper(this, R.style.Theme_Dialog));
         builder.setMessage(message);
@@ -146,7 +152,10 @@ public class ReactionGameActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 reactiontime.onPress(reactionbutton);
-                // Runnable
+
+                // http://stackoverflow.com/questions/19873063/handler-is-abstract-cannot-be-instantiated
+                // User: Chinmay Dabke, Glenn-- | Accessed: 09/27/2014
+                // Comments: Runnable and Handler
                 handler.postDelayed(reactionTimer, (int) randomTime());
 
                 // Incorrect Press Handled Here
@@ -162,13 +171,14 @@ public class ReactionGameActivity extends AppCompatActivity {
         });
     }
 
-    //Derived from from 301 lab
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void loadFromFile() {
         try {
             FileInputStream fis = openFileInput(FILENAME);
             BufferedReader in = new BufferedReader(new InputStreamReader(fis));
             Gson gson = new Gson();
-            // https://google-gson.googlecode.com/svn/trunk/gson/docs/javadocs/com/google/gson/Gson.html, 2015/09/23
             statistics = gson.fromJson(in, StatsReaction.class);
         } catch (FileNotFoundException e) {
             // TODO Auto-generated catch block
@@ -179,6 +189,9 @@ public class ReactionGameActivity extends AppCompatActivity {
         }
     }
 
+    // Used with permission from Joshua Campbell
+    // https://github.com/joshua2ua/lonelyTwitter
+    // Accessed: 09/28/2015
     private void saveInFile() {
         try {
             FileOutputStream fos = openFileOutput(FILENAME, 0);

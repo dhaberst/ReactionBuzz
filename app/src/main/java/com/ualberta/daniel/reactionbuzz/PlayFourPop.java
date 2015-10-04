@@ -44,6 +44,8 @@ public class PlayFourPop extends Activity {
 
         ok = (Button)findViewById(R.id.Ok);
 
+        //https://www.youtube.com/watch?v=fn5OlqQuOCk
+        // User: Filip Vujovic | Accessed 09/26/2015
         DisplayMetrics dm = new DisplayMetrics();
         getWindowManager().getDefaultDisplay().getMetrics(dm);
 
@@ -55,6 +57,8 @@ public class PlayFourPop extends Activity {
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // http://stackoverflow.com/questions/22892732/android-close-activity-on-button-click
+                // User: Raghunandan | Accessed: 09/26/2015
                 finish();
             }
         });

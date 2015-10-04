@@ -1,10 +1,15 @@
 <resources>
         <!-- Base application theme. -->
+
+    <!-- http://stackoverflow.com/questions/27093287/how-to-change-status-bar-color-to-match-app-in-lollipop-android -->
+    <!--User: Gjoko Bozinov | Accessed: 09/13/2015 -->
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#009eff</item>
         <item name="android:textColorPrimary">#ffffff</item>
     </style>
+    <!-- https://www.youtube.com/watch?v=fn5OlqQuOCk -->
+    <!-- User: Filip Vujovic | Accessed 09/26/2015 -->
     <style name="AppTheme.CustomPopTheme" >
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">false</item>
@@ -13,6 +18,8 @@
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowCloseOnTouchOutside">true</item>
     </style>
+    <!-- http://stackoverflow.com/questions/2422562/how-to-change-theme-for-alertdialog -->
+    <!-- User: Arve Waltin, Rodrigo Venancio | Accessed: 09/28/2015 -->
     <style name="Theme_Dialog" parent="AlertDialog.AppCompat.Light">
         <item name="android:textColorPrimary">#000000</item>
         <item name="android:gravity">center</item>
