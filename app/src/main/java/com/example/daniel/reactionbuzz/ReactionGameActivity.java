@@ -39,8 +39,6 @@ public class ReactionGameActivity extends AppCompatActivity {
 
     final Handler handler = new Handler();
 
-    Boolean validPress = true;
-
     Runnable reactionTimer = new Runnable() {
         @Override
         public void run() {
@@ -128,6 +126,15 @@ public class ReactionGameActivity extends AppCompatActivity {
                 reactiontime.onPress(reactionbutton);
                 // Runnable
                 handler.postDelayed(reactionTimer, (int) randomTime());
+
+                // Incorrect Press Handled Here
+                reactionbutton.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        //handler.removeCallbacks(reactionTimer);
+                        reactionReturnDialog("Incorrect Press");
+                    }
+                });
             }
         });
     }
