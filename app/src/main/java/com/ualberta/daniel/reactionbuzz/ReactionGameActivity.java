@@ -130,8 +130,9 @@ public class ReactionGameActivity extends AppCompatActivity {
                 reactionbutton.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        //handler.removeCallbacks(reactionTimer);
+                        reactiontime.onReset(reactionbutton);
                         reactionReturnDialog("Incorrect Press");
+                        handler.removeCallbacks(reactionTimer);
                     }
                 });
             }
