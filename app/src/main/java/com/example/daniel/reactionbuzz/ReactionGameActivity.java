@@ -124,17 +124,12 @@ public class ReactionGameActivity extends AppCompatActivity {
         reactionbutton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                onClickTimer();
+
+                reactiontime.onPress(reactionbutton);
+                // Runnable
+                handler.postDelayed(reactionTimer, (int) randomTime());
             }
         });
-    }
-
-    public void onClickTimer() {
-
-        reactiontime.onPress(reactionbutton);
-        // Runnable
-        handler.postDelayed(reactionTimer, (int) randomTime());
-
     }
 
     //Derived from from 301 lab
