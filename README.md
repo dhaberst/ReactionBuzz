@@ -7,6 +7,8 @@
 
 <p>For a preview of my application please see https://www.youtube.com/watch?v=6w9-MLA9KEI</p>
 
+<p>Check code for citations!</p>
+
 <p>Thanks!</p>
 
 <h3> Please refer to LICENSE in /doc/LICENSE </h3>
